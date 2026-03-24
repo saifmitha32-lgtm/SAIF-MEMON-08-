@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rate Us - Bonsters</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background:linear-gradient(#020617,#0f172a);
+    color:white;
+}
+
+header {
+    background-color:orange;
+    color: white;
+    padding: 20px;
+    text-align:center;
+    border-bottom:3px solid blue;
+}
+header h1{
+margin:0;
+color:green;
+}
+
+nav{
+background:#1e293b;
+padding:15px;
+text-align:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-size:18px;
+margin:15px;
+padding:8px 15px;
+border-radius:5px;
+}
+
+nav a:hover{
+background:#22c55e;
+color:black;
+}
+
+.brands {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    margin: 15px;
+    padding: 15px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px ;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+
+footer {
+    background: black;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>BONSTERS:THE PREMIUM CLOTHING BRAND</h1>
+    <p>Your feedback matters!</p>
+</header>
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="T-SHIRTS.html">T-SHIRTS </a>
+
+<a href="SHIRTS.html">SHIRTS</a>
+
+<a href="JEANS.html">JEANS</a>
+
+<a href="HOODIES.html">HOODIES</a>
+
+<a href="CUSTOMER CARE.html">CUSTOMER CARE</a>
+
+<a href="RATING.html">RATING</a>
+
+</nav>
+
+<h1>Rate Our Products</h1>
+<section class="rating-container">
+
+    <h2>Give Your Rating</h2>
+
+    <div class="stars">
+        <span onclick="rate(1)">★</span>
+        <span onclick="rate(2)">★</span>
+        <span onclick="rate(3)">★</span>
+        <span onclick="rate(4)">★</span>
+        <span onclick="rate(5)">★</span>
+    </div>
+
+    <p id="result">No rating given</p>
+
+    <textarea placeholder="Write your review..."></textarea>
+    <button onclick="submitReview()">Submit</button>
+
+</section>
+
+<footer>
+    <p>© 2026 Bonsters | Designed by Saif Memon</p>
+</footer>
+
+<script>
+function rate(num) {
+    document.getElementById("result").innerText = "You rated " + num + " star(s)";
+}
+
+function submitReview() {
+    alert("Thank you for your feedback!");
+}
+</script>
+
+</body>
+</html>
